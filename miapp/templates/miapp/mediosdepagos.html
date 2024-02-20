@@ -1,0 +1,28 @@
+{% block titulo %}
+<h3>estoy en la parte de medios de pago <h3>
+    {% endblock titulo %}
+
+    {% block contenido %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre de del producto</th>
+                <th>precio</th>
+                <th>tarjeta</th>
+            </tr>
+        </thead>
+        <tbody>
+
+{% for m in mediosdepagos  %}
+<tr>
+    <td>{{ m.id }}</td>
+    <td>{{ m.nombre }}</td>
+    <td>{{ m.tarjeta }}</td>
+    <td>{{ m.precio }}</td>
+   
+</tr>
+{% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

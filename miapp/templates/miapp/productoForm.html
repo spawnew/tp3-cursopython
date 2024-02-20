@@ -1,0 +1,23 @@
+
+{%extends 'miapp/home.html'%}
+
+
+{% block titulo %}
+<h3>estoy en la parte de form productos<h3>
+    {% endblock titulo %}
+    {% block contenido %}
+<form action="" method="post">
+    {% csrf_token %}
+
+    <table>
+        {{  form.as_table }}
+    </table>
+    <input type="submit" value="Enviar">
+
+    
+</form>
+{% endblock contenido %}
+
+
+
+

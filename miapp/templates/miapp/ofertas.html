@@ -1,0 +1,31 @@
+{%extends 'miapp/home.html'%}
+
+
+{% block titulo %}
+<h3>estoy en la parte de ofertas<h3>
+    {% endblock titulo %}
+
+    {% block contenido %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre de del oferta</th>
+                <th>precio</th>
+            </tr>
+        </thead>
+        <tbody>
+
+{% for o in ofertas  %}
+<tr>
+    <td>{{ o.id }}</td>
+    <td>{{ o.nombre }}</td>
+    <td>{{ o.precio }}</td>
+    <td>{{ o.fechamax }}</td>
+   
+</tr>
+{% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
+    

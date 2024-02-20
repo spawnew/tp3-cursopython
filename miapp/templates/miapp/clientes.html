@@ -1,0 +1,29 @@
+{%extends 'miapp/home.html'%}
+
+
+{% block titulo %}
+<h3>estoy en la parte de clientes<h3>
+    {% endblock titulo %}
+
+    {% block contenido %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre de del producto</th>
+                <th>precio</th>
+            </tr>
+        </thead>
+        <tbody>
+
+{% for c in clientes  %}
+<tr>
+    <td>{{ c.id }}</td>
+    <td>{{ c.nombre }}</td>
+    <td>{{ c.dni }}</td>
+   
+</tr>
+{% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
